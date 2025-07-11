@@ -28,7 +28,7 @@ echo "<pre>";
 $i = 0;
 
 while ($i < $height) {
-    drawRow($width, $i);
+    drawRow($width, $is);
     $i++;
 }
 
