@@ -1,1 +1,3 @@
-<?php echo("Hello LaPlateforme");
+<?php
+
+echo"Hello LaPlateforme";
