@@ -1,6 +1,6 @@
 <body>
     <fieldset>
-        <form method="GET" action="getData.php">
+        <form method="$method" action="$handleSubmit">
             <legend>
                 <img src="https://plesk.students-laplateforme.io/cp/theme/images/logos/plesk/logo.svg?1665649994"
                     alt="logo de plesk">
@@ -32,6 +32,6 @@
                 </div>
                 <button type="submit">Envoyer</button>
             </section>
-        </form>
+        </form>   
     </fieldset>
 </body>

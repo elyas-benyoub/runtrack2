@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php require "_head.php"; ?>
+<?php
+require "_head.php"; 
+$method = "GET";
+$handleSubmit = "getData.php";
+?>
 
 <body>
     <?php require "_form.php"; ?>
