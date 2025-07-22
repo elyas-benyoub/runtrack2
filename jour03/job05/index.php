@@ -1,3 +1,8 @@
+<h1>Jour03 > Job05</h1>
+<a href="../job04/index.php">prev</a>
+<a href="../job06/index.php">next</a>
+<br /><br />
+
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -9,29 +14,15 @@ $dic = array(
     "voyelles"  => 0
 );
 
-function isVowel($c) {
-    $vowel = ['a', 'e', 'i', 'y', 'o', 'u', 'A', 'E', 'I', 'Y', 'O', 'U'];
-    foreach ($vowel as $v) {
-        if ($c === $v) return true;
-    }
-    return false;
-}
-
-function isAlpha($char) {
-    if (($char >= 'a' && $char <= 'z') || ($char >= 'A' && $char <= 'Z')) {
-        return true;
-    }
-
-    return false;
-}
+include_once "../../functions.php";
 
 function sort_alpha(&$dic, $str) {
 
     $i = 0;
 
     while (isset($str[$i])) {
-        if (isAlpha($str[$i])) {
-            if (isVowel($str[$i])) {
+        if (ft_isAlpha($str[$i])) {
+            if (ft_isVowel($str[$i])) {
                 $dic['voyelles'] += 1;
             } else {
                 $dic['consonnes'] += 1;

@@ -1,3 +1,8 @@
+<h1>D2 > J5 : Nombres premiers</h1>
+<a href="../job04/index.php">prev</a>
+<a href="../job06/index.php">next</a>
+<br /><br />
+
 <?php
 
 function isPrime($nbr) {

@@ -1,6 +1,6 @@
 <body>
     <fieldset>
-        <form method="$method" action="$handleSubmit">
+        <form method="<?= $method ?>" action="<?= $handleSubmit ?>">
             <legend>
                 <img src="https://plesk.students-laplateforme.io/cp/theme/images/logos/plesk/logo.svg?1665649994"
                     alt="logo de plesk">
@@ -9,22 +9,22 @@
             <section>
                 <div>
                     <label for="firstname">Votre prénom</label>
-                    <input type="text" name="firstname" id="firstname">
+                    <input type="text" name="firstname" id="firstname" value="Elyas">
                 </div>
                 <div>
                     <label for="lastname">Votre nom</label>
-                    <input type="text" name="lastname" id="lastname">
+                    <input type="text" name="lastname" id="lastname" value="Benyoub">
                 </div>
                 <div>
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" value="ebenyoub@me.com">
                 </div>
                 <div>
                     <label for="genre">Quel est votre genre ?</label>
                     <div class="select-wrapper">
                         <select name="genre" id="genre">
-                            <option value="">--Choisissez une option--</option>
-                            <option value="male">Homme</option>
+                            <option value="male">--Choisissez une option--</option>
+                            <option value="male" checked="true">Homme</option>
                             <option value="female">Femme</option>
                             <option value="autre">Autre</option>
                         </select>

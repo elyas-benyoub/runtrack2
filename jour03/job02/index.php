@@ -1,14 +1,19 @@
+<h1>Jour03 > Job02</h1>
+<a href="../job01/index.php">prev</a>
+<a href="../job03/index.php">next</a>
+<br /><br />
+
 <?php
+
+include_once "../../functions.php";
 
 $str = "Tous ces instants seront perdus dans le temps comme les larmes sous la pluie.";
 
-function isEven($nbr) {
-    if ($nbr % 2 === 0) return true;
-    return false;
-}
+$i = 0;
 
-for ($i = 0; $i < strlen($str); $i++) {
-    if (isEven($i)) {
+while (isset($str[$i])) {
+    if (ft_isEven($i)) {
         echo "$str[$i]";
     }
+    $i++;
 }

@@ -1,17 +1,12 @@
+<h1>Jour03 > Job04</h1>
+<a href="../job03/index.php">prev</a>
+<a href="../job05/index.php">next</a>
+<br /><br />
+
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
+include_once "../../functions.php";
 
 $str = "Dans l'espace, personne ne vous entend crier";
 
-function ft_strlen($str) {
-    $i = 0;
-
-    while (isset($str[$i])) {
-        $i++;
-    }
-
-    return $i;
-}
-
-echo $str . "<br />Nombre de caractères : " . strlen($str);
+echo $str . "<br />Nombre de caractères : " . ft_strlen($str);

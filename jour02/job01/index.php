@@ -1,3 +1,7 @@
+<h1>D2 > J1</h1>
+<a href="../job02/index.php">next</a>
+<br /><br />
+
 <?php
 
 $i = 0;

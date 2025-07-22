@@ -1,11 +1,23 @@
+<h1>Jour03 > Job06</h1>
+<a href="../job05/index.php">prev</a>
+<a href="../job07/index.php">next</a>
+<br /><br />
+
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
+include_once "../../functions.php";
 
 $str = "Les choses que l'on possède finissent par nous posséder.";
-$str_array = mb_str_split($str, 1, "UTF-8");
 
-for ($i = count($str_array) - 1; $i >= 0; $i--) {
-    echo $str_array[$i];
+$splited = ft_str_split_entity($str);
+
+if ($splited !== []) {
+    $i = ft_count($splited);
+
+    while ($i > 0) {
+        $i--;
+        echo $splited[$i];
+    }
+} else {
+    echo "Error : empty array";
 }

@@ -1,20 +1,16 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
+<h1>Jour03 > Job01</h1>
+<a href="../../jour02/job07/index.php">prev</a>
+<a href="../job02/index.php">next</a>
+<br /><br />
 
 <?php
+
+include_once "../../functions.php";
 
 $tab = [200, 204, 173, 98, 171, 404, 459];
 
-function isEven($nbr) {
-    if ($nbr % 2 === 0) return true;
-    return false;
-}
-
 foreach ($tab as $nbr) {
-    if (isEven($nbr)) {
+    if (ft_isEven($nbr)) {
         echo "$nbr est paire<br />";
     } else {
         echo "$nbr est impaire<br />";
