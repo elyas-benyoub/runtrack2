@@ -29,6 +29,7 @@ function drawRow($width, $y) {
 function drawTriangle($height, $width) {
     $i = 0;
     
+    echo "<pre>";
     while ($i < $height - 1) {
         drawRow($width, $i);
         $i++;
@@ -43,8 +44,7 @@ function drawTriangle($height, $width) {
     }
 
     echo '\\';
+    echo "</pre>";
 }
 
-echo "<pre>";
 drawTriangle($height, $width = $height * 2);
-echo "</pre>";

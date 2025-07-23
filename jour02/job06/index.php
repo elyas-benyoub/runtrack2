@@ -7,48 +7,30 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$x = 20;
-$y = 10;
 
-function displayRow($x) {
+function displayRow($width, $height, $y) {
     $i = 0;
 
-    while ($i < $x) {
-        if ($i === 0 || $i === $x - 1) {
-            echo "|";
+    while ($i < $width) {
+        if ($i === 0 || $i === $width - 1) {
+            echo $y === 0 || $y === $height - 1 ? '+' : '|';
         } else {
-            echo "&nbsp;";
+            echo $y === 0 || $y === $height - 1 ? '-' : "&nbsp;";
         }
+
         $i++;
     }
     echo "<br />";
 }
 
-function displayRowTopBot($x) {
-    $i = 0;
+function drawRectangle($width, $height) {
+    echo "<pre>";
 
-    while ($i < $x) {
-        if ($i === 0 || $i === $x - 1) {
-            echo "+";
-        } else {
-            echo "-";
-        }
-
-        $i++;
+    for ($y = 0; $y < $height; $y++) {
+        displayRow($width, $height, $y);
     }
 
-    echo "<br />";
+    echo "</pre>";
 }
 
-// Balise pour le style monospace
-echo "<pre>";
-
-for ($i = 0; $i < $y; $i++) {
-    if ($i === 0 || $i === $y - 1) {
-        displayRowTopBot($x);
-    } else {
-        displayRow($x);
-    }
-}
-
-echo "</pre>";
+drawRectangle(20, 10);
