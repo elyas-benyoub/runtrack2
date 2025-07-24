@@ -1,5 +1,6 @@
-<h1>Jour04 > Job07</h1>
+<h1>Jour06 > Job01</h1>
 <a href="../job06/index.php">prev</a>
+<a href="../../jour06/job05/index.php">next</a>
 <br /><br />
 
 <?php
