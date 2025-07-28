@@ -1,9 +1,6 @@
-<h1>D2 > J4</h1>
-<a href="../job03/index.php">prev</a>
-<a href="../job05/index.php">next</a>
-<br /><br />
-
 <?php
+
+require_once "../../ressources/navigation.php";
 
 $i = 1;
 

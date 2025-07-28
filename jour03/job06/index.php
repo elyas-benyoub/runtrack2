@@ -1,15 +1,12 @@
-<h1>Jour03 > Job06</h1>
-<a href="../job05/index.php">prev</a>
-<a href="../job07/index.php">next</a>
-<br /><br />
-
 <?php
 
-include_once "../../functions.php";
+require_once "../../ressources/navigation.php";
+require_once "../../FT/split_html_entities.php";
+require_once "../../FT/count.php";
 
 $str = "Les choses que l'on possède finissent par nous posséder.";
 
-$splited = ft_str_split_entity($str);
+$splited = ft_split_html_entities($str);
 
 if ($splited !== []) {
     $i = ft_count($splited);

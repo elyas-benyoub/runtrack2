@@ -1,11 +1,7 @@
-<h1>Jour04 > Job05</h1>
-<a href="../job04/index.php">prev</a>
-<a href="../job06/index.php">next</a>
-<br /><br />
-
 <?php
 
-require_once "../../functions.php";
+require_once "../../ressources/navigation.php";
+require_once "../../FT/count.php";
 
 if (ft_count($_POST) > 0) {
     $_POST["username"] === "John" && $_POST["password"] === "Rambo"

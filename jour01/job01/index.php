@@ -1,4 +1,7 @@
 <?php
+
+require_once "../../ressources/navigation.php";
+
 $str = "LaPlateforme";
 $str2 = "Vive";
 $str3 = "!";

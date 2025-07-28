@@ -1,9 +1,6 @@
-<h1>D2 > J2</h1>
-<a href="../job01/index.php">prev</a>
-<a href="../job03/index.php">next</a>
-<br /><br />
-
 <?php
+
+require_once "../../ressources/navigation.php";
 
 $limit = 1337;
 $forbiddenNumbers = [26, 37, 1111];

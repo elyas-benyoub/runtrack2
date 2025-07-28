@@ -1,4 +1,5 @@
-<?php require_once "../../functions.php"; ?>
+<?php require_once "../../FT/count.php"; ?>
+
 <?php $data = ft_count($_GET) > 0 ? $_GET : $_POST; ?>
 
 <h1><?= ft_count($_GET) > 0 ? 'GET' : 'POST'; ?></h1>

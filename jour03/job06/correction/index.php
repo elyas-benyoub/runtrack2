@@ -6,10 +6,10 @@ header('Content-Type: text/html; charset="utf-8"');
 
 <body>
     <?php
-    
-    include 'head.html';
+
+    require 'head.html';
     $str = "Les choses que l'on possède finissent par nous posséder.";
-    
+
     $i = 0;
 
     while (isset($str[$i])) {

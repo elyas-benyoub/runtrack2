@@ -1,18 +1,20 @@
-<h1>Jour04 > Job06</h1>
-<a href="../job05/index.php">prev</a>
-<a href="../job07/index.php">next</a>
-<br /><br />
-
 <?php
-require_once "../../functions.php";
+
+require_once "../../ressources/navigation.php";
+require_once "../../FT/count.php";
+require_once "../../FT/is_integer.php";
+require_once "../../FT/putnbr.php";
+require_once "../../FT/is_even.php";
+
+
 
 $nbr = null;
 
 if (ft_count($_GET) > 0) {
     $nbr = $_GET["number"] ?? null;
-    if (ft_isInteger($nbr)) {
+    if (ft_is_integer($nbr)) {
         $nbr = ft_putnbr($nbr);
-        $message = "$nbr : " . (ft_isEven($nbr) ? "Nombre pair" : "Nombre impair");
+        $message = "$nbr : " . (ft_is_even($nbr) ? "Nombre pair" : "Nombre impair");
     } else {
         $message = "Entrez un nombre entier.";
     }

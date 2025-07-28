@@ -1,6 +1,6 @@
 <body>
     <fieldset>
-        <form method="<?= $method ?>" action="<?= $handleSubmit ?>">
+        <form id="form" method="<?= $method ?>" action="<?= $handleSubmit ?>">
             <legend>
                 <img src="https://plesk.students-laplateforme.io/cp/theme/images/logos/plesk/logo.svg?1665649994"
                     alt="logo de plesk">
@@ -34,4 +34,5 @@
             </section>
         </form>   
     </fieldset>
+    <script src="https://kit.fontawesome.com/cf618d8113.js" crossorigin="anonymous"></script>
 </body>

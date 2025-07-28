@@ -1,14 +1,12 @@
-<h1>Jour03 > Job07</h1>
-<a href="../job06/index.php">prev</a>
-<a href="../../jour04/job01/index.php">next</a>
-<br /><br />
-
 <?php
+
+require_once "../../ressources/navigation.php";
+require_once "../../ft/str_split.php";
+require_once "../../ft/strtoupper.php";
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-include_once "../../functions.php";
 
 $str = "Certaines choses changent, et d'autres ne changeront jamais.";
 
@@ -18,11 +16,12 @@ $str_new = "";
 $i = 1;
 
 while (isset($str_array[$i])) {
-    $str_new  .= $str_array[$i];
+    $str_new .= $str_array[$i];
     $i++;
 }
 
 $str_new .= $str_array[0];
+$str_new[0] = ft_strtoupper($str_new[0]);
 
 $i = 0;
 

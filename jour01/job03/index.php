@@ -1,4 +1,7 @@
 <?php
+
+require_once "../../ressources/navigation.php";
+
 $varBool = true;
 $varString = "Elyas";
 $varInt = 34;

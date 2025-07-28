@@ -1,11 +1,8 @@
-<h1>Jour03 > Job04</h1>
-<a href="../job03/index.php">prev</a>
-<a href="../job05/index.php">next</a>
-<br /><br />
-
 <?php
 
-include_once "../../functions.php";
+require_once "../../ressources/navigation.php";
+
+require_once "../../FT/strlen.php";
 
 $str = "Dans l'espace, personne ne vous entend crier";
 
