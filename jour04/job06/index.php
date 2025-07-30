@@ -3,7 +3,7 @@
 require_once "../../ressources/navigation.php";
 require_once "../../FT/count.php";
 require_once "../../FT/is_integer.php";
-require_once "../../FT/putnbr.php";
+require_once "../../FT/atoi.php";
 require_once "../../FT/is_even.php";
 
 
@@ -13,7 +13,7 @@ $nbr = null;
 if (ft_count($_GET) > 0) {
     $nbr = $_GET["number"] ?? null;
     if (ft_is_integer($nbr)) {
-        $nbr = ft_putnbr($nbr);
+        $nbr = ft_atoi($nbr);
         $message = "$nbr : " . (ft_is_even($nbr) ? "Nombre pair" : "Nombre impair");
     } else {
         $message = "Entrez un nombre entier.";

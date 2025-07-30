@@ -1,6 +1,8 @@
 <?php
 
-function ft_putnbr($str)
+require_once "is_integer.php";
+
+function ft_atoi($str)
 {
     if (!ft_is_integer($str))
         return null;
