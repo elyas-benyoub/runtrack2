@@ -46,6 +46,7 @@ if (in_array('runtrack2', $segments)) {
 ?>
 
 <nav>
+    <a href="<?= $baseUrl ?>/index.php" id="menu-button">🏠 Menu</a>
     <form id="form-nav"">
         <label for="nav">Navigation :&nbsp;</label>
         <select id="nav" onchange="window.location.href = this.value">
@@ -97,5 +98,19 @@ if (in_array('runtrack2', $segments)) {
     #next {
         display: flex;
         gap: 1em;
+    }
+
+    #menu-button {
+        text-decoration: none;
+        padding: 6px 12px;
+        background-color: #eee;
+        border-radius: 4px;
+        color: black;
+        border: 1px solid #ccc;
+        font-weight: bold;
+    }
+
+    #menu-button:hover {
+        background-color: #ddd;
     }
 </style>
