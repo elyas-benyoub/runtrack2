@@ -6,32 +6,25 @@ require_once "functions.php";
 
 reset_game();
 
+// recuperation des donnees pour le tour
 $battlefield = getBattlefield();
-$message = "";
-
 $location = $_GET['location'] ?? null;
 $player = getPlayer();
 
-playTurn($location, $battlefield, $player);
+// on lance le tour
+$location && playTurn($location, $battlefield, $player);
 
+// on sauvegarde les nouvelles donnees
 $_SESSION['battlefield'] = $battlefield;
 $_SESSION['player'] = $player;
 
-$message = $player == 1 ? "<p class='red'>↠ PLAYER 1</p>" : "<p class='green'>↠ PLAYER 2</p>";
+// on recupere les resultats
 $end = isEnded();
 $winner = isWinner();
-
-
-if ($end && !$winner) {
-    $message = "<p style='color: blue; font-size: 2rem;'>AUCUN GAGNANT<?p>";
-}
-
-if ($winner) {
-    $color = $winner === 1 ? "red" : "green";
-    $message = "<p style='color: $color; font-size: 2rem;'>PLAYER $winner GAGNE<?p>";
-}
+$message = getMessage($player, $end, $winner);
 
 ?>
 
+<!-- on affiche le jeu -->
 <?php require_once "../../ressources/navigation.php"; ?>
 <?php require_once "view.php"; ?>
