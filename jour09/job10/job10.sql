@@ -1,0 +1,1 @@
+select sum(superficie) from etage;

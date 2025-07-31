@@ -1,0 +1,1 @@
+select sum(capacite) from salles;

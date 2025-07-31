@@ -1,0 +1,1 @@
+select nom, prenom, naissance from etudiants where sexe = 'Femme';

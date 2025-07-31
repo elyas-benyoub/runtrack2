@@ -1,0 +1,1 @@
+select * from etudiants where timestampdiff(year, naissance, CURDATE()) >= 18;
