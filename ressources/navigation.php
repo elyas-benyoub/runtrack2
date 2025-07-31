@@ -37,6 +37,12 @@ foreach ($navigation as $group) foreach ($group as $item) $flat[] = $item;
 $currentIndex = array_search(true, array_column($flat, 'selected'));
 $prev = $flat[$currentIndex - 1] ?? null;
 $next = $flat[$currentIndex + 1] ?? null;
+$baseUrl = '';
+$scriptPath = trim($_SERVER['SCRIPT_NAME'], '/');
+$segments = explode('/', $scriptPath);
+if (in_array('runtrack2', $segments)) {
+    $baseUrl = '/' . $segments[0];
+}
 ?>
 
 <nav>
@@ -46,7 +52,7 @@ $next = $flat[$currentIndex + 1] ?? null;
             <?php foreach ($navigation as $jour => $jobs): ?>
                 <optgroup label="<?= htmlspecialchars(ucfirst($jour)) ?>">
                     <?php foreach ($jobs as $item): ?>
-                        <option value="/runtrack2/<?= htmlspecialchars($item['path']) ?>"
+                        <option value="<?= $baseUrl ?>/<?= htmlspecialchars($item['path']) ?>"
                             <?= $item['selected'] ? 'selected' : '' ?>>
                             <?= htmlspecialchars($item['label']) ?>
                         </option>
@@ -58,11 +64,11 @@ $next = $flat[$currentIndex + 1] ?? null;
 
     <div id="next">
         <?php if ($prev): ?>
-            <a href="/runtrack2/<?= htmlspecialchars($prev['path']) ?>">⬅️ Précédent</a>
+            <a href="<?= $baseUrl ?>/<?= htmlspecialchars($prev['path']) ?>">⬅️ Précédent</a>
         <?php endif; ?>
 
         <?php if ($next): ?>
-            <a href="/runtrack2/<?= htmlspecialchars($next['path']) ?>" >Suivant ➡️</a>
+            <a href="<?= $baseUrl ?>/<?= htmlspecialchars($next['path']) ?>" >Suivant ➡️</a>
         <?php endif; ?>
     </div>
 </nav>
