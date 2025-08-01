@@ -23,9 +23,8 @@ function reset_game()
     // si query de l'url contient reset on reinitialise le tableau
     if (isset($_GET['reset'])) {
         $_SESSION['battlefield'] = reset_battlefield();
-        $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-        header("Location: $uri");
+        header("Location: $_SERVER[PHP_SELF]");
         exit;
     }
 }

@@ -5,17 +5,16 @@ require_once "../../FT/atoi.php";
 $nbvisites = null;
 
 if (isset($_GET["reset"])) {
-    $new_url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     setcookie("nbvisites", '', time() - 3600);
-    header("Location: $new_url");
+    header("Location: $_SERVER[PHP_SELF]");
     exit;
 }
 
-if (isset($_COOKIE["nbvisites"])) {
-    $nbvisites = ft_atoi($_COOKIE["nbvisites"]) + 1;
-    setcookie("nbvisites", $nbvisites);
+if (isset($_COOKIE["nbvisites"])) { // si un cookie existe
+    $nbvisites = ft_atoi($_COOKIE["nbvisites"]) + 1; // on l'enregistre en l'incrementant (decalage !!)
+    setcookie("nbvisites", $nbvisites); // on actualise le cookie
 } else {
-    setcookie("nbvisites", 1, time() + 60);
+    setcookie("nbvisites", 1, time() + 60); // s'il exite pas on le crée pour la premiere visite
     $nbvisites = 1;
 }
 

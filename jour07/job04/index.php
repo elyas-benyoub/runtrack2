@@ -2,21 +2,20 @@
 
 require_once "../../ressources/navigation.php";
 
-function calcul($a, $operator, $b) {
-    switch ($operator) {
-        case '+':
-            return $a + $b;
-        case '-':
-            return $a - $b;
-        case '/':
-            return $a / $b;
-        case '*':
-            return $a * $b;
-        case '%':
-            return $a % $b;
-        default:
-            return "Opérateur incorrecte.";
+function calcul($a, $operator, $b)
+{
+    if (($operator === '/' || $operator === '%') && $b == 0) {
+        return "Erreur : division par zéro.";
     }
+    
+    return match ($operator) {
+        '+' => $a + $b,
+        '-' => $a - $b,
+        '/' => $a / $b,
+        '*' => $a * $b,
+        '%' => $a % $b,
+        default => "Opérateur incorrecte.",
+    };
 }
 
 $a = 2;

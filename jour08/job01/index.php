@@ -6,9 +6,8 @@ $_SESSION["nbvisites"] = ($_SESSION["nbvisites"] ?? 0) + 1;
 
 if (isset($_GET["reset"])) {
     $_SESSION["nbvisites"] = 0;
-    $new_url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-    header("Location: $new_url");
+    header("Location: $_SERVER[PHP_SELF]");
     exit;
 }
 
