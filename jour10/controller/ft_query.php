@@ -8,6 +8,7 @@ function ft_query($query)
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
         $mysqli = db_connect();
+        $mysqli->set_charset('utf8mb4');
         $result = $mysqli->query($query);
         $fields = $result->fetch_fields();
 
